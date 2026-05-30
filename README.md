@@ -1,5 +1,4 @@
-readme = """# Retinal Vessel Segmentation — U-Net
-
+# Retinal Vessel Segmentation — U-Net
 Segmentación de vasos retinianos para detección de retinopatía diabética
 mediante U-Net y Attention U-Net implementadas desde cero en PyTorch.
 
@@ -33,3 +32,60 @@ git clone https://github.com/TU_USUARIO/retinal-vessel-segmentation
 ```
 
 **2. Organizar datasets en Google Drive**
+MyDrive/retinal_segmentation/
+├── data/
+│   ├── DRIVE/training/images/     (20 imágenes .tif)
+│   ├── DRIVE/training/1st_manual/ (20 máscaras .gif)
+│   ├── CHASE_DB1/images/          (28 imágenes .jpg)
+│   └── CHASE_DB1/annotations/     (28 máscaras .png)
+├── src/
+│   ├── dataset.py
+│   ├── model.py
+│   ├── train.py
+│   └── evaluate.py
+└── requirements.txt
+**3. Abrir y ejecutar**
+
+Abrir `run_all.ipynb` en Google Colab y ejecutar:
+Runtime > Run all
+Esto ejecuta automáticamente:
+- Instalación de dependencias
+- Carga y preprocesamiento de datos (CLAHE)
+- Entrenamiento de 3 experimentos (ablación)
+- Evaluación completa en DRIVE
+- Experimento cross-domain DRIVE→CHASE_DB1
+- Generación de todas las figuras
+
+## Estructura del proyecto
+retinal_segmentation/
+├── src/
+│   ├── dataset.py     # DataLoaders DRIVE y CHASE_DB1
+│   ├── model.py       # U-Net y Attention U-Net desde cero
+│   ├── train.py       # Loop de entrenamiento + métricas
+│   └── evaluate.py    # Evaluación, ROC, análisis de fallos
+├── checkpoints/       # Mejores modelos guardados (.pth)
+├── results/
+│   ├── figures/       # Todas las gráficas generadas
+│   └── metrics/       # Métricas en JSON
+├── run_all.ipynb      # Notebook principal (un solo comando)
+├── requirements.txt   # Dependencias
+└── README.md
+
+## Entorno
+
+- Python 3.12
+- PyTorch 2.0+
+- CUDA 12.x (GPU NVIDIA L4)
+- Ver `requirements.txt` para lista completa
+
+## Autor
+
+Gonzalo Huarac Chacca  
+Doctorado en Ingeniería — CEDITER, UNSAAC  
+Cusco, Perú — 2026
+"""
+
+with open(f'{BASE}/README.md', 'w') as f:
+    f.write(readme)
+print('✅ README.md creado')
+
