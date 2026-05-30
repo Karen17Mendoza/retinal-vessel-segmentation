@@ -72,7 +72,7 @@ retinal_segmentation/
 
 - Karen Melanie Mendoza Ayala
 - Maestria en Inteligencia Artificial- POSGRADO-UNI  
-- Cusco, Perú — 2026
+- Lima, Perú — 2026
 
 
 
