@@ -33,17 +33,7 @@ git clone https://github.com/TU_USUARIO/retinal-vessel-segmentation
 
 **2. Organizar datasets en Google Drive**
 MyDrive/retinal_segmentation/
-├── data/
-│   ├── DRIVE/training/images/     (20 imágenes .tif)
-│   ├── DRIVE/training/1st_manual/ (20 máscaras .gif)
-│   ├── CHASE_DB1/images/          (28 imágenes .jpg)
-│   └── CHASE_DB1/annotations/     (28 máscaras .png)
-├── src/
-│   ├── dataset.py
-│   ├── model.py
-│   ├── train.py
-│   └── evaluate.py
-└── requirements.txt
+
 **3. Abrir y ejecutar**
 
 Abrir `run_all.ipynb` en Google Colab y ejecutar:
