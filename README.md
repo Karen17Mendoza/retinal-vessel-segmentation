@@ -70,12 +70,10 @@ retinal_segmentation/
 
 ## Autor
 
-Gonzalo Huarac Chacca  
-Doctorado en Ingeniería — CEDITER, UNSAAC  
+Karen Melanie Mendoza Ayala
+Maestria en Inteligencia Artificial- POSGRADO-UNI  
 Cusco, Perú — 2026
 """
 
-with open(f'{BASE}/README.md', 'w') as f:
-    f.write(readme)
-print('✅ README.md creado')
+
 
