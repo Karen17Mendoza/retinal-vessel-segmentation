@@ -70,10 +70,10 @@ retinal_segmentation/
 
 ## Autor
 
-Karen Melanie Mendoza Ayala
-Maestria en Inteligencia Artificial- POSGRADO-UNI  
-Cusco, Perú — 2026
-"""
+- Karen Melanie Mendoza Ayala
+- Maestria en Inteligencia Artificial- POSGRADO-UNI  
+- Cusco, Perú — 2026
+
 
 
 
