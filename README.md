@@ -105,6 +105,7 @@ Esto ejecuta automáticamente:
 
 ## Autor
 
+GRUPO 5- REDES NEURONALES
 Karen Melanie Mendoza Ayala  
 Maestria en Inteligencia Artificial 
 POSGRADO-UNI  
