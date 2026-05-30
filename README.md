@@ -32,21 +32,38 @@ mediante U-Net y Attention U-Net implementadas desde cero en PyTorch.
 git clone https://github.com/Karen17Mendoza/retinal-vessel-segmentation
 \`\`\`
 
-**2. Organizar datasets en Google Drive**
-\`\`\`
-MyDrive/retinal_segmentation/
-├── data/
-│   ├── DRIVE/training/images/      (20 imágenes .tif)
-│   ├── DRIVE/training/1st_manual/  (20 máscaras .gif)
-│   ├── CHASE_DB1/images/           (28 imágenes .jpg)
-│   └── CHASE_DB1/annotations/      (28 máscaras .png)
-├── src/
-│   ├── dataset.py
-│   ├── model.py
-│   ├── train.py
-│   └── evaluate.py
-└── requirements.txt
-\`\`\`
+### Paso 2 — Organizar datasets en Google Drive
+
+Crear la siguiente estructura en Google Drive:
+
+    MyDrive/
+    retinal_segmentation/
+        data/
+            DRIVE/
+                training/
+                    images/         <- 20 imagenes .tif
+                    1st_manual/     <- 20 mascaras .gif
+                    mask/           <- 20 mascaras FOV
+                test/
+                    images/         <- 20 imagenes .tif
+            CHASE_DB1/
+                images/             <- 28 imagenes .jpg
+                annotations/        <- 28 mascaras .png
+            STARE/
+                images/             <- 19 imagenes
+                masks_ah/           <- mascaras anotador 1
+                masks_vk/           <- mascaras anotador 2
+        src/
+            dataset.py
+            model.py
+            train.py
+            evaluate.py
+        checkpoints/
+        results/
+            figures/
+            metrics/
+        requirements.txt
+        run_all.ipynb
 
 **3. Abrir en Google Colab y ejecutar**
 
@@ -63,21 +80,21 @@ Esto ejecuta automáticamente:
 - Experimento cross-domain DRIVE→CHASE_DB1
 - Generación de todas las figuras
 
-## Estructura del proyecto
+## Estructura del repositorio
 
-\`\`\`
-retinal_segmentation/
-├── src/
-│   ├── dataset.py     # DataLoaders DRIVE y CHASE_DB1
-│   ├── model.py       # U-Net y Attention U-Net desde cero
-│   ├── train.py       # Loop de entrenamiento + métricas
-│   └── evaluate.py    # Evaluación, ROC, análisis de fallos
-├── results/
-│   └── figures/       # Todas las gráficas generadas
-├── run_all.ipynb      # Notebook principal — un solo comando
-├── requirements.txt   # Dependencias
-└── README.md
-\`\`\`
+    retinal-vessel-segmentation/
+        src/
+            dataset.py      <- DataLoaders DRIVE y CHASE_DB1
+            model.py        <- U-Net y Attention U-Net desde cero
+            train.py        <- Loop de entrenamiento y metricas
+            evaluate.py     <- Evaluacion, curva ROC, fallos
+        results/
+            figures/        <- Graficas generadas
+        run_all.ipynb       <- Notebook principal
+        requirements.txt    <- Dependencias
+        README.md
+
+---
 
 ## Entorno
 
